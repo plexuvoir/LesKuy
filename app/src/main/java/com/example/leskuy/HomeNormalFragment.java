@@ -24,7 +24,7 @@ public class HomeNormalFragment extends Fragment implements MapelAdapter.ItemCli
         String[] data = {"Matematika", "IPA", "IPS", "PKN", "KWU", "MetPen", "Agama", "PUX", "PPP", "PAPB"};
         // set up the RecyclerView
         RecyclerView recyclerView = rootView.findViewById(R.id.home_normal_recycler_view);
-        int numberOfColumns = Utility.calculateNoOfColumns(rootView.getContext(), 200);
+        int numberOfColumns = 3;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), numberOfColumns));
         adapter = new MapelAdapter(getContext(), data);
         adapter.setClickListener(this);

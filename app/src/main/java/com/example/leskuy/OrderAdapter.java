@@ -18,11 +18,11 @@ import java.util.List;
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
 
     private Context context;
-    private List<List_Order> my_data;
+    private List<List_Order> listOrders;
 
     public OrderAdapter(Context context, List<List_Order> my_data) {
         this.context = context;
-        this.my_data = my_data;
+        this.listOrders = my_data;
 
 
     }
@@ -35,10 +35,11 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-//        holder.nama.setText();
-//        holder.harga.setText();
-//        holder.alamat.setText();
-//        holder.rating.setText();
+        List_Order listOrder = listOrders.get(position);
+        holder.nama.setText(listOrder.getNama());
+        holder.harga.setText(String.valueOf(listOrder.getHarga()));
+        holder.alamat.setText(listOrder.getAlamat());
+        holder.rating.setText(String.valueOf(listOrder.getRating()));
 
         holder.card_tutor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +56,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-        return my_data.size();
+        return listOrders.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
