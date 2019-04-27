@@ -1,6 +1,7 @@
 package com.example.leskuy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,12 +14,12 @@ import android.view.ViewGroup;
 
 public class HomeNormalFragment extends Fragment implements MapelAdapter.ItemClickListener {
     MapelAdapter adapter;
-
+    View rootView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home_normal, container, false);
+        rootView = inflater.inflate(R.layout.fragment_home_normal, container, false);
         // data to populate the RecyclerView with
         String[] data = {"Matematika", "IPA", "IPS", "PKN", "KWU", "MetPen", "Agama", "PUX", "PPP", "PAPB"};
         // set up the RecyclerView
@@ -35,7 +36,8 @@ public class HomeNormalFragment extends Fragment implements MapelAdapter.ItemCli
 
     @Override
     public void onItemClick(View view, int position) {
-        Log.i("TAG", "You clicked number " + adapter.getItem(position) + ", which is at cell position " + position);
+        Intent intent = new Intent(rootView.getContext(),OrderActivity.class);
+        startActivity(intent);
     }
 
 }
