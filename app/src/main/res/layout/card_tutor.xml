@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginVertical="5dp"
+    android:background="#ffffff"
+    android:padding="5dp"
+    android:id="@+id/card_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/round_card">
+        <ImageView
+            android:src="@drawable/user"
+            android:padding="5dp"
+            android:layout_margin="3dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Tutor"
+                android:id="@+id/txt_nama"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#534CBE"
+                />
+            <LinearLayout
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Tutor"
+                    android:id="@+id/txt_alamat"
+                    android:textColor="#534CBE"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp "
+                    android:textColor="#534CBE"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50000"
+                    android:id="@+id/txt_harga"
+                    android:textColor="#534CBE"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/jam"
+                    android:textColor="#534CBE"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/outline_star_border_black_18dp"
+                    />
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="#534CBE"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="5"
+                    android:id="@+id/rating"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#534CBE"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="/5"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
