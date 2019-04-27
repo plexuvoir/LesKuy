@@ -58,5 +58,12 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        txt_daftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignInActivity.this, RegisterActivity.class));
+            }
+        });
+
     }
 }

@@ -1,116 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingLeft="29dp"
-    android:paddingTop="51dp"
-    android:paddingRight="29dp"
+
     tools:context=".RegisterActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18.5dp"
-        android:gravity="center_horizontal"
-        android:text="REGISTER"
-        android:textColor="@color/Tombol"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:orientation="horizontal">
-
         <LinearLayout
-            android:id="@+id/register_siswa_linear_layout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#E0E0E4"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SISWA"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/register_tutor_linear_layout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#A5A3B4"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TUTOR"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/form_register"
-        android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:orientation="vertical">
-
-        <EditText
-            style="@style/RegisterEditText"
-            android:hint="Nama" />
-
-        <EditText
-            style="@style/RegisterEditText"
-            android:hint="Email" />
-
-        <EditText
-            style="@style/RegisterEditText"
-            android:hint="Password"
-            android:inputType="textPassword" />
-
-        <EditText
-            style="@style/RegisterEditText"
-            android:hint="Konfirmasi Password"
-            android:inputType="textPassword" />
-
-        <Spinner
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:id="@+id/register_spinner"
-            android:layout_weight="1"
-            android:entries="@array/gender_arrays">
-
-        </Spinner>
-
-        <EditText
-            style="@style/RegisterEditText"
-            android:hint="No. Handphone" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="29dp"
+            android:paddingTop="51dp"
+            android:paddingRight="29dp">
 
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18.5dp"
+                android:gravity="center_horizontal"
+                android:text="REGISTER"
+                android:textColor="@color/Tombol"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/register_daftar_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52.5dp"
-        android:backgroundTint="@color/Tombol"
-        android:text="Daftar"
-        android:textColor="@android:color/white"
-        android:textSize="20sp" />
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/register_siswa_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#A5A3B4"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SISWA"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/register_tutor_linear_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#E0E0E4"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TUTOR"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/form_register"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_nama"
+                    style="@style/RegisterEditText"
+                    android:hint="Nama" />
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    style="@style/RegisterEditText"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"/>
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    style="@style/RegisterEditText"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/edit_confirm_password"
+                    style="@style/RegisterEditText"
+                    android:hint="Konfirmasi Password"
+                    android:inputType="textPassword" />
+
+                <Spinner
+                    android:id="@+id/register_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:entries="@array/gender_arrays">
+
+                </Spinner>
+
+                <EditText
+                    android:id="@+id/edit_no_hp"
+                    style="@style/RegisterEditText"
+                    android:hint="No. Handphone"
+                    android:inputType="number"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_daftar_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52.5dp"
+                android:backgroundTint="@color/Tombol"
+                android:text="Daftar"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+</ScrollView>
