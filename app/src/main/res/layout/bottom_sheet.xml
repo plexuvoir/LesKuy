@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelas"
+        android:layout_marginBottom="30dp"
+        android:textSize="25sp"
+        android:textColor="#534CBE"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginVertical="3dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_kls1"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 1"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls2"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 2"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls3"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 3"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginVertical="3dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_kls4"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 4"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls5"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 5"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls6"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 6"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginVertical="3dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_kls7"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 7"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls8"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 8"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls9"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 9"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginVertical="3dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_kls10IPA"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 10 IPA"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls11IPA"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 11 IPA"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls12IPA"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 12 IPA"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginVertical="3dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_kls10IPS"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 10 IPS"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls11IPS"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 11 IPS"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+        <Button
+            android:id="@+id/btn_kls12IPS"
+            android:layout_marginHorizontal="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_card"
+            android:text="Kelas 12 IPS"
+            android:textStyle="bold"
+            android:textColor="#534CBE"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
