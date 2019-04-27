@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#e0e0e0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="#F7F8FA"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="70dp"
+            android:paddingBottom="130dp"
+            android:orientation="vertical"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELAMAT DATANG DI"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:textColor="#534CBE"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LESKUY"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center_horizontal"
+                android:textColor="#534CBE"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tempat Terbaik Untuk Mencari Tutor Belajar Anda"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Email"
+                android:textSize="20sp"
+                android:textColor="#534CBE"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="#534CBE"
+                android:id="@+id/edit_email"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="20sp"
+                android:textColor="#534CBE"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:inputType="textPassword"
+                android:backgroundTint="#534CBE"
+                android:id="@+id/edit_password"
+                />
+            <Button
+                android:background="@drawable/round_button"
+                android:text="MASUK"
+                android:textSize="22sp"
+                android:textColor="#F7F8FA"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:id="@+id/btn_masuk"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:paddingHorizontal="60dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:text="Belum punya akun? Silakan"/>
+        <TextView
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:text=" Daftar"
+            android:textColor="#534CBE"
+            android:id="@+id/txt_daftar"/>
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
