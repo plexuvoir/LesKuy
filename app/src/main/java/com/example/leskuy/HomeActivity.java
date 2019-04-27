@@ -2,6 +2,7 @@ package com.example.leskuy;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -24,18 +25,17 @@ public class HomeActivity extends AppCompatActivity implements BottomSheetDialog
 
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
+
+        HomeKosongFragment homeKosongFragment = new HomeKosongFragment();
+        fragmentTransaction.add(R.id.home_mata_pelajaran_fragment, homeKosongFragment);
         fragmentTransaction.commit();
-
-
-        HomeKosongFragment fragment = new HomeKosongFragment();
-        fragmentTransaction.add(R.id.home_mata_pelajaran_fragment, fragment);
 
         pilihKelas = findViewById(R.id.home_pilih_kelas_button);
         pilihKelas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog();
-                bottomSheetDialog.show(getSupportFragmentManager(),"bottomSheet");
+                bottomSheetDialog.show(getSupportFragmentManager(), "bottomSheet");
 
             }
         });
@@ -44,6 +44,13 @@ public class HomeActivity extends AppCompatActivity implements BottomSheetDialog
     @Override
     public void onButtonClicked(String text) {
         pilihKelas.setText(text);
-//        startActivity(new Intent(HomeActivity.this, SignInActivity.class));
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.home_mata_pelajaran_fragment);
+        HomeNormalFragment homeNormalFragment = new HomeNormalFragment();
+        if (fragment != null)
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .remove(fragment)
+                    .add(R.id.home_mata_pelajaran_fragment, homeNormalFragment)
+                    .commit();
     }
 }

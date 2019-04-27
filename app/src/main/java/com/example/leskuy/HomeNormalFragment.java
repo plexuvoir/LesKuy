@@ -4,40 +4,39 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class HomeNormalFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class HomeNormalFragment extends Fragment implements MapelAdapter.ItemClickListener {
+    MapelAdapter adapter;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeNormalFragment() {
-        // Required empty public constructor
-    }
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_home_normal, container, false);
+        // data to populate the RecyclerView with
+        String[] data = {"Matematika", "IPA", "IPS", "PKN", "KWU", "MetPen", "Agama", "PUX", "PPP", "PAPB"};
+        // set up the RecyclerView
+        RecyclerView recyclerView = rootView.findViewById(R.id.home_normal_recycler_view);
+        int numberOfColumns = Utility.calculateNoOfColumns(rootView.getContext(), 200);
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), numberOfColumns));
+        adapter = new MapelAdapter(getContext(), data);
+        adapter.setClickListener(this);
+        recyclerView.setAdapter(adapter);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_normal, container, false);
+        return rootView;
     }
 
 
+    @Override
+    public void onItemClick(View view, int position) {
+        Log.i("TAG", "You clicked number " + adapter.getItem(position) + ", which is at cell position " + position);
+    }
+
 }
+
