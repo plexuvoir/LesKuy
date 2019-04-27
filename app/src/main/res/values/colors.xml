@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="Tombol">#534CBE</color>
+    <color name="AbuGelap">#A5A3B4</color>
+    <color name="AbuTerang">#E0E0E4</color>
 </resources>
