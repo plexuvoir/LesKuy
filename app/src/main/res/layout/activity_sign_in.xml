@@ -67,13 +67,20 @@
                 android:textSize="20sp"
                 android:textColor="#534CBE"
                 />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:inputType="textPassword"
-                android:backgroundTint="#534CBE"
-                android:id="@+id/edit_password"
-                />
+            <android.support.design.widget.TextInputLayout
+                app:passwordToggleEnabled="true"
+                app:boxStrokeColor="#534CBE"
+                style="@style/RegisterEditText"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:inputType="textPassword"
+                    android:backgroundTint="#534CBE"
+                    android:id="@+id/edit_password"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
             <Button
                 android:background="@drawable/round_button"
                 android:text="MASUK"

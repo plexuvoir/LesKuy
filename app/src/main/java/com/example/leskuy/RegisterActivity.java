@@ -67,13 +67,27 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                db.getReference("Users").child("123").child("1").setValue("TES9999");
-                if (edit_password.getText().toString().equals(edit_confirm_password.getText().toString())) {
 
+                db.getReference("Users").child("123").child("1").setValue("TES9999");
+                if (edit_nama.getText().toString().equalsIgnoreCase("")) {
+                    edit_nama.setError("Tidak boleh kosong");
+                } else if (edit_email.getText().toString().equalsIgnoreCase("")) {
+                    edit_email.setError("Tidak boleh kosong");
+                } else if (edit_password.getText().toString().equalsIgnoreCase("")) {
+                    edit_password.setError("Tidak boleh kosong");
+                } else if (edit_confirm_password.getText().toString().equalsIgnoreCase("")) {
+                    edit_confirm_password.setError("Tidak boleh kosong");
+                } else if (edit_no_hp.getText().toString().equalsIgnoreCase("")) {
+                    edit_no_hp.setError("Tidak boleh kosong");
+                } else if (!edit_password.getText().toString().equals(edit_confirm_password.getText().toString())) {
+                    edit_confirm_password.setError("Password tidak cocok");
+                }else if(kelamin.getSelectedItem().toString().trim().equalsIgnoreCase("Jenis Kelamin")){
+                    Toast.makeText(RegisterActivity.this, "Jenis kelamin tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                } else {
                     String emailString = edit_email.getText().toString().trim();
                     String passwordString = edit_password.getText().toString().trim();
                     Log.d("cekEmail", emailString);
-                    auth.createUserWithEmailAndPassword(emailString,passwordString).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
+                    auth.createUserWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             Toast.makeText(RegisterActivity.this, "Alex ganteng", Toast.LENGTH_SHORT).show();
@@ -82,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                             String emailString = edit_email.getText().toString().trim();
                             String jenisKelaminString = kelamin.getSelectedItem().toString().trim();
                             String nomorHPString = edit_no_hp.getText().toString().trim();
-   //                         UserModel user = new UserModel(namaString, emailString, jenisKelaminString, nomorHPString);
+                            //                         UserModel user = new UserModel(namaString, emailString, jenisKelaminString, nomorHPString);
 //                            Map<String, Object> userDetail = user.dataToMap();
 //                            Map<String, Object> childUpdates = new HashMap<>();
 //                            childUpdates.put("ALEX GANTENG",userDetail);
@@ -100,7 +114,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Drawable background = siswa.getBackground();
                             if (background instanceof ColorDrawable)
                                 color = ((ColorDrawable) background).getColor();
-                            if (color == Color.parseColor("#A5A3B4")){
+                            if (color == Color.parseColor("#A5A3B4")) {
                                 mDatabase.child("Users").child("Siswa").child(auth.getCurrentUser().getUid().toString()).setValue(dataMap);
                             } else {
                                 mDatabase.child("Users").child("Tutor").child(auth.getCurrentUser().getUid().toString()).setValue(dataMap);
@@ -115,9 +129,6 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
 //
-
-                } else {
-                    Toast.makeText(RegisterActivity.this, "Password Tidak Cocok", Toast.LENGTH_SHORT).show();
                 }
             }
         });

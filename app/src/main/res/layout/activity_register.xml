@@ -87,17 +87,36 @@
                     android:hint="Email"
                     android:inputType="textEmailAddress"/>
 
-                <EditText
-                    android:id="@+id/edit_password"
+                <android.support.design.widget.TextInputLayout
+                    app:passwordToggleEnabled="true"
+                    app:boxStrokeColor="#534CBE"
                     style="@style/RegisterEditText"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
+                    >
+                    <EditText
+                        android:id="@+id/edit_password"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    app:passwordToggleEnabled="true"
+                    app:boxStrokeColor="#534CBE"
+                    style="@style/RegisterEditText"
+                    >
+                    <EditText
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_confirm_password"
+                        style="@style/RegisterEditText"
+                        android:hint="Konfirmasi Password"
+                        android:inputType="textPassword" />
 
-                <EditText
-                    android:id="@+id/edit_confirm_password"
-                    style="@style/RegisterEditText"
-                    android:hint="Konfirmasi Password"
-                    android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+
 
                 <Spinner
                     android:id="@+id/register_spinner"
