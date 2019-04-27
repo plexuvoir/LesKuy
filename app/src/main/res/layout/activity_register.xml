@@ -141,10 +141,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52.5dp"
-                android:backgroundTint="@color/Tombol"
+                android:background="@drawable/round_button"
                 android:text="Daftar"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
+
         </LinearLayout>
 
 </ScrollView>

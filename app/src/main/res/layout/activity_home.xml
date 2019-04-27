@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F7F8FA"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/home_foto_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/user" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Hi, "
+                        android:textColor="#534CBE"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/home_nama_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Alex"
+                        android:textColor="#534CBE"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat datang di LesKuy!"
+                    android:textColor="#534CBE"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/home_bell_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/user" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/home_pilih_kelas_button"
+        android:layout_width="336dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/round_card"
+        android:text="Pilih Kelas"
+        android:textAllCaps="false"
+        android:textColor="#534CBE"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="333dp"
+        android:layout_height="352dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/round_card"
+        android:orientation="vertical"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:gravity="center"
+            android:text="Mata Pelajaran"
+            android:textColor="#534CBE"
+            android:textSize="15sp" />
+
+        <FrameLayout
+            android:id="@+id/home_mata_pelajaran_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
