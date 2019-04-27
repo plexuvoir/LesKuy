@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "399099922173",
+    "firebase_url": "https://leskuy-4c67a.firebaseio.com",
+    "project_id": "leskuy-4c67a",
+    "storage_bucket": "leskuy-4c67a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399099922173:android:7276c827ec37c2f0",
+        "android_client_info": {
+          "package_name": "com.example.leskuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399099922173-32d17rpo786b5ukl0m2ggcg7s1av3ev5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.leskuy",
+            "certificate_hash": "f8a2e6482354bf6b162a5541827edd298c13ffbe"
+          }
+        },
+        {
+          "client_id": "399099922173-b4moova44mkl5m462s0sdtq96qh8kak9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxChWEuV_gbozjSXXpKWRi7T_HLW--SKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399099922173-b4moova44mkl5m462s0sdtq96qh8kak9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
