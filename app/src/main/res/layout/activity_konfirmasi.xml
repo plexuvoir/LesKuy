@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KonfirmasiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:background="#A0B9FC">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="131dp"
+                android:background="#F7F8FA">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NAMA TUTORNYA"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="MATA PELAJARAN TUTOR"
+                android:textColor="#CFCFCF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Kamu Telah Memilih"
+        android:textColor="#6F69C8"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <LinearLayout style="@style/KonfirmasiLinearLayout">
+
+            <TextView
+                style="@style/KonfirmasiTextView"
+                android:text="Nama Tutor: " />
+
+            <TextView
+                android:id="@+id/konfirmasi_nama_tutor_text_view"
+                style="@style/KonfirmasiTextView" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/KonfirmasiLinearLayout">
+
+            <TextView
+                style="@style/KonfirmasiTextView"
+                android:text="Mata Pelajaran: " />
+
+            <TextView
+                android:id="@+id/konfirmasi_mapel_text_view"
+                style="@style/KonfirmasiTextView" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/KonfirmasiLinearLayout">
+
+            <TextView
+                style="@style/KonfirmasiTextView"
+                android:text="Jadwal: " />
+
+            <TextView
+                android:id="@+id/konfirmasi_jadwal_text_view"
+                style="@style/KonfirmasiTextView" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/KonfirmasiLinearLayout">
+
+            <TextView
+                style="@style/KonfirmasiTextView"
+                android:text="Durasi: " />
+
+            <TextView
+                android:id="@+id/konfirmasi_durasi_text_view"
+                style="@style/KonfirmasiTextView" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/KonfirmasiLinearLayout">
+
+            <TextView
+                style="@style/KonfirmasiTextView"
+                android:text="Harga: " />
+
+            <TextView
+                android:id="@+id/konfirmasi_harga_text_view"
+                style="@style/KonfirmasiTextView" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_red"
+            android:text="BATAL"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:text="KONFIRMASI"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
