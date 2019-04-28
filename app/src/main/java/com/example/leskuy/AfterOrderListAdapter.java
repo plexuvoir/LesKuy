@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class AfterOrderListAdapter extends RecyclerView.Adapter<AfterOrderListAd
     public void onBindViewHolder(@NonNull AfterOrderListAdapter.ViewHolder holder, final int position) {
         List_After_Order_List listAfterOrder = listAfterOrders.get(position);
         holder.nama.setText(listAfterOrder.getNama());
+        Log.d("nama2", listAfterOrder.getNama());
         holder.matpel.setText(listAfterOrder.getMatpel());
         holder.tanggal.setText(listAfterOrder.getTanggal());
         holder.status.setText(listAfterOrder.getStatus());

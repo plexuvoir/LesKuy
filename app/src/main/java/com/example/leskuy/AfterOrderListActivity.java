@@ -43,16 +43,15 @@ public class AfterOrderListActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        db.getReference("Pesanan").addValueEventListener(new ValueEventListener() {
+        db.getReference("Pesanan").child(auth.getCurrentUser().getUid().toString()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot sn : dataSnapshot.getChildren()) {
                     String nama = sn.child("nama").getValue(String.class);
-                    String matpel = sn.child("matpel").getValue(String.class);
-                    String tanggal = sn.child("tanggal").getValue(String.class);
-                    String status = sn.child("status").getValue(String.class);
                     Log.d("nama", nama);
-                    list_after_orders.add(new List_After_Order_List(nama,matpel,tanggal,status));
+                    String matpel = sn.child("mapel").getValue(String.class);
+                    Log.d("mapel", matpel);
+                    list_after_orders.add(new List_After_Order_List(nama,matpel,"28 April 2019","Belum Dikonfirmasi"));
                 }
                 adapter = new AfterOrderListAdapter(AfterOrderListActivity.this, list_after_orders);
                 recycler_after_order.setAdapter(adapter);
@@ -64,5 +63,6 @@ public class AfterOrderListActivity extends AppCompatActivity {
 
             }
         });
+
     }
 }
