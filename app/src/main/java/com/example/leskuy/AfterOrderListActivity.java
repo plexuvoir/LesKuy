@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,43 +19,43 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class OrderActivity extends AppCompatActivity {
+public class AfterOrderListActivity extends AppCompatActivity {
 
-    public List<List_Order> list_orders = new ArrayList<List_Order>();
-    public RecyclerView recycler_order;
-    public RecyclerView.Adapter adapter_order;
+    public List<List_After_Order_List> list_after_orders = new ArrayList<List_After_Order_List>();
+    public RecyclerView recycler_after_order;
+    public RecyclerView.Adapter adapter_after_order;
     private FirebaseDatabase db;
     private LinearLayoutManager linearLayoutManager;
     private FirebaseAuth auth;
-    HashMap<String, String> order = new HashMap<>();
-    private OrderAdapter adapter;
+    HashMap<String, String> after_order = new HashMap<>();
+    private AfterOrderListAdapter adapter;
     private ProgressBar progressBar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order);
-        recycler_order = findViewById(R.id.recycler_order);
-        recycler_order.setHasFixedSize(true);
+        setContentView(R.layout.activity_after_order_list);
+        recycler_after_order = findViewById(R.id.recycler_after_order);
+        recycler_after_order.setHasFixedSize(true);
         linearLayoutManager = new LinearLayoutManager(this);
-        recycler_order.setLayoutManager(linearLayoutManager);
+        recycler_after_order.setLayoutManager(linearLayoutManager);
         progressBar = findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.VISIBLE);
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
-
-
-        db.getReference("Users").child("Tutor").addValueEventListener(new ValueEventListener() {
+        db.getReference("Pesanan").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot sn : dataSnapshot.getChildren()) {
                     String nama = sn.child("nama").getValue(String.class);
+                    String matpel = sn.child("matpel").getValue(String.class);
+                    String tanggal = sn.child("tanggal").getValue(String.class);
+                    String status = sn.child("status").getValue(String.class);
                     Log.d("nama", nama);
-                    list_orders.add(new List_Order(nama, "malang", 50000, 5));
+                    list_after_orders.add(new List_After_Order_List(nama,matpel,tanggal,status));
                 }
-                adapter = new OrderAdapter(OrderActivity.this,list_orders);
-                recycler_order.setAdapter(adapter);
+                adapter = new AfterOrderListAdapter(AfterOrderListActivity.this, list_after_orders);
+                recycler_after_order.setAdapter(adapter);
                 progressBar.setVisibility(View.GONE);
             }
 
@@ -65,7 +64,5 @@ public class OrderActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 }

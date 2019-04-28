@@ -45,11 +45,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ActivityOrder2.class);
-//                intent.putExtra("id", String.valueOf(my_data.get(position).getId()));
-//                intent.putExtra("title", String.valueOf(my_data.get(position).getTitle()));
-//                intent.putExtra("body", String.valueOf(my_data.get(position).getBody()));
+                intent.putExtra("nama", String.valueOf(listOrders.get(position).getNama()));
                 view.getContext().startActivity(intent);
-
             }
         });
     }
