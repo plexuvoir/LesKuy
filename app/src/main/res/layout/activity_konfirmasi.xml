@@ -46,6 +46,7 @@
                 android:src="@drawable/user" />
 
             <TextView
+                android:id="@+id/konfirmasi_nama_tutor_logo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -54,6 +55,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/konfirmasi_mapel_tutor_logo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -149,6 +151,7 @@
         android:paddingHorizontal="20dp">
 
         <Button
+            android:id="@+id/konfirmasi_batal_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
@@ -160,6 +163,7 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/konfirmasi_konfirmasi_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"

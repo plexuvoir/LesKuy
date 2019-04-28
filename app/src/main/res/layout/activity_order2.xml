@@ -58,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:id="@+id/order2_mapel_tutor_text_view"
                 android:text="MATA PELAJARAN TUTOR"
                 android:textColor="#CFCFCF"
                 android:textSize="15sp" />

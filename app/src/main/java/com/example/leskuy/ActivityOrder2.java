@@ -55,12 +55,24 @@ public class ActivityOrder2 extends AppCompatActivity {
         jadwalAdapter = new JadwalAdapter(ActivityOrder2.this, listJadwal);
         verticalRecycler.setAdapter(jadwalAdapter);
 
-//        Intent intent = new Intent(ActivityOrder2.this, AfterOrderListActivity.class);
-//        startActivity(intent);
-
         namaTutor = findViewById(R.id.order2_nama_tutor_text_view);
-        Intent intent = getIntent();
-        namaTutor.setText(intent.getStringExtra("nama"));
+        mataPelajaranTutor = findViewById(R.id.order2_mapel_tutor_text_view);
+        Intent intentA = getIntent();
+        namaTutor.setText(intentA.getStringExtra("nama"));
+        mataPelajaranTutor.setText(intentA.getStringExtra("mataPelajaran"));
+
+        pesan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityOrder2.this, KonfirmasiActivity.class);
+                intent.putExtra("namaTutor", namaTutor.getText().toString());
+                intent.putExtra("mataPelajaran", mataPelajaranTutor.getText().toString());
+                intent.putExtra("jadwal", "Senin");
+                intent.putExtra("durasi", "1 jam");
+                intent.putExtra("harga", "Rp50.000");
+                startActivity(intent);
+            }
+        });
     }
 
 

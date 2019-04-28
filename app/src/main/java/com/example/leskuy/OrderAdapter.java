@@ -23,8 +23,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     public OrderAdapter(Context context, List<List_Order> my_data) {
         this.context = context;
         this.listOrders = my_data;
-
-
     }
 
     @Override
@@ -35,6 +33,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+
         List_Order listOrder = listOrders.get(position);
         holder.nama.setText(listOrder.getNama());
         holder.harga.setText(String.valueOf(listOrder.getHarga()));
@@ -46,6 +45,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ActivityOrder2.class);
                 intent.putExtra("nama", String.valueOf(listOrders.get(position).getNama()));
+                intent.putExtra("mataPelajaran",OrderActivity.mataPelajaran);
                 view.getContext().startActivity(intent);
             }
         });
@@ -61,7 +61,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         public CardView card_tutor;
         public ViewHolder(View itemView){
             super(itemView);
-            card_tutor = (CardView) itemView.findViewById(R.id.card_tutor);
+            card_tutor = itemView.findViewById(R.id.card_tutor);
             nama = itemView.findViewById(R.id.txt_nama);
             alamat = itemView.findViewById(R.id.txt_alamat);
             harga = itemView.findViewById(R.id.txt_harga);

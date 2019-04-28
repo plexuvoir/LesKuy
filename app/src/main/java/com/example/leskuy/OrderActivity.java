@@ -1,5 +1,6 @@
 package com.example.leskuy;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class OrderActivity extends AppCompatActivity {
     HashMap<String, String> order = new HashMap<>();
     private OrderAdapter adapter;
     private ProgressBar progressBar;
+    public static String mataPelajaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,8 @@ public class OrderActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
-
+        Intent intent = getIntent();
+        mataPelajaran = intent.getStringExtra("mataPelajaran");
 
         db.getReference("Users").child("Tutor").addValueEventListener(new ValueEventListener() {
             @Override
@@ -55,7 +58,7 @@ public class OrderActivity extends AppCompatActivity {
                     Log.d("nama", nama);
                     list_orders.add(new List_Order(nama, "malang", 50000, 5));
                 }
-                adapter = new OrderAdapter(OrderActivity.this,list_orders);
+                adapter = new OrderAdapter(OrderActivity.this, list_orders);
                 recycler_order.setAdapter(adapter);
                 progressBar.setVisibility(View.GONE);
             }

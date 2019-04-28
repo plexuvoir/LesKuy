@@ -15,13 +15,14 @@ import android.view.ViewGroup;
 public class HomeNormalFragment extends Fragment implements MapelAdapter.ItemClickListener {
     MapelAdapter adapter;
     View rootView;
+    String[] data = {"Matematika", "IPA", "IPS", "PKN", "KWU", "MetPen", "Agama", "PUX", "PPP", "PAPB"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_home_normal, container, false);
         // data to populate the RecyclerView with
-        String[] data = {"Matematika", "IPA", "IPS", "PKN", "KWU", "MetPen", "Agama", "PUX", "PPP", "PAPB"};
+
         // set up the RecyclerView
         RecyclerView recyclerView = rootView.findViewById(R.id.home_normal_recycler_view);
         int numberOfColumns = 3;
@@ -33,10 +34,10 @@ public class HomeNormalFragment extends Fragment implements MapelAdapter.ItemCli
         return rootView;
     }
 
-
     @Override
     public void onItemClick(View view, int position) {
-        Intent intent = new Intent(rootView.getContext(),OrderActivity.class);
+        Intent intent = new Intent(rootView.getContext(), OrderActivity.class);
+        intent.putExtra("mataPelajaran", data[position]);
         startActivity(intent);
     }
 
