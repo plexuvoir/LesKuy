@@ -24,6 +24,7 @@ public class ActivityOrder2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order2);
 
@@ -49,8 +50,9 @@ public class ActivityOrder2 extends AppCompatActivity {
         listJam.add(new List_Jam("07.00", "08.00"));
         listJam.add(new List_Jam("08.00", "09.00"));
         listJam.add(new List_Jam("09.00", "10.00"));
-        listJadwal.add(new List_Jadwal("Senin", listJam.subList(0, 5)));
-        listJadwal.add(new List_Jadwal("Selasa", listJam.subList(6, 10)));
+        listJadwal.add(new List_Jadwal("Senin", listJam.subList(0, 3)));
+        listJadwal.add(new List_Jadwal("Selasa", listJam.subList(4, 7)));
+        listJadwal.add(new List_Jadwal("Selasa", listJam.subList(8, 10)));
 
         jadwalAdapter = new JadwalAdapter(ActivityOrder2.this, listJadwal);
         verticalRecycler.setAdapter(jadwalAdapter);

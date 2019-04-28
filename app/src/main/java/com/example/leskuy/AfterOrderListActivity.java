@@ -32,6 +32,7 @@ public class AfterOrderListActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_order_list);
         recycler_after_order = findViewById(R.id.recycler_after_order);

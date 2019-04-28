@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ActivityOrder2">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -46,19 +47,19 @@
                 android:src="@drawable/user" />
 
             <TextView
+                android:id="@+id/order2_nama_tutor_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:id="@+id/order2_nama_tutor_text_view"
                 android:text="NAMA TUTORNYA"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/order2_mapel_tutor_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:id="@+id/order2_mapel_tutor_text_view"
                 android:text="MATA PELAJARAN TUTOR"
                 android:textColor="#CFCFCF"
                 android:textSize="15sp" />
@@ -76,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="11dp"
             android:gravity="center"
             android:text="Jadwal Mengajar"
             android:textColor="#6F69C8"
@@ -84,23 +86,24 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/order2_vertical_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="11dp"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
 
         </android.support.v7.widget.RecyclerView>
 
-        <Button
-            android:layout_width="152dp"
-            android:layout_height="57dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/round_button"
-            android:text="PESAN"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:id="@+id/order2_pesan_button"
-            android:textStyle="bold" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/order2_pesan_button"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_button"
+        android:text="PESAN"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

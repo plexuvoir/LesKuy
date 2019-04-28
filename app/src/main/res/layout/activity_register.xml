@@ -145,6 +145,29 @@
                 android:text="Daftar"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp"
+                android:paddingHorizontal="60dp"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:text="Sudah punya akun? Silakan"/>
+                <TextView
+                    android:gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:text=" Masuk"
+                    android:textColor="#534CBE"
+                    android:id="@+id/masuk"/>
+            </LinearLayout>
 
         </LinearLayout>
 

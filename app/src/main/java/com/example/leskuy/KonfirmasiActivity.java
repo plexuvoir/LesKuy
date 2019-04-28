@@ -23,6 +23,7 @@ public class KonfirmasiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_konfirmasi);
         nama = findViewById(R.id.konfirmasi_nama_tutor_text_view);

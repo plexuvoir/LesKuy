@@ -11,12 +11,14 @@ import android.view.ViewGroup;
 
 public class HomeKosongFragment extends Fragment {
 
+    View rootView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_kosong, container, false);
+        rootView = inflater.inflate(R.layout.fragment_home_kosong, container, false);
+        return rootView;
     }
 
 }

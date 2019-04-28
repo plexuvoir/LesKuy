@@ -41,11 +41,22 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private DatabaseReference mDatabase;
     private FirebaseDatabase db;
+    TextView masuk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        masuk = findViewById(R.id.masuk);
+        masuk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, SignInActivity.class);
+                startActivity(intent);
+            }
+        });
 
         edit_nama = findViewById(R.id.edit_nama);
         edit_email = findViewById(R.id.edit_email);
@@ -81,7 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
                     edit_no_hp.setError("Tidak boleh kosong");
                 } else if (!edit_password.getText().toString().equals(edit_confirm_password.getText().toString())) {
                     edit_confirm_password.setError("Password tidak cocok");
-                }else if(kelamin.getSelectedItem().toString().trim().equalsIgnoreCase("Jenis Kelamin")){
+                } else if (kelamin.getSelectedItem().toString().trim().equalsIgnoreCase("Jenis Kelamin")) {
                     Toast.makeText(RegisterActivity.this, "Jenis kelamin tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 } else {
                     String emailString = edit_email.getText().toString().trim();
@@ -90,8 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                     auth.createUserWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            Toast.makeText(RegisterActivity.this, "Alex ganteng", Toast.LENGTH_SHORT).show();
-                            String retypePasswordString = edit_confirm_password.getText().toString().trim();
+//                            String retypePasswordString = edit_confirm_password.getText().toString().trim();
                             String namaString = edit_nama.getText().toString().trim();
                             String emailString = edit_email.getText().toString().trim();
                             String jenisKelaminString = kelamin.getSelectedItem().toString().trim();
